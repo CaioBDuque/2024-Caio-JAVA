@@ -25,7 +25,7 @@ const contaPaga = false;
 
 console.log(0 == false); // retorna verdadeiro(True)
 console.log('' == false); //retorna verdadeiro(True)
-console.log(1 == true); // retornar verdadeiro(True)
+console.log(1 == true); // retorna verdadeiro(True)
 
 console.log(contaPaga == 1);
 
@@ -41,3 +41,25 @@ console.log(typeof minhaVar);
 console.log(typeof varNull);
 console.log(typeof numero);
 console.log(typeof string);
+
+//conversão implicíta
+
+const numeroNumber = 786
+const numeroString = "786"
+
+console.log(numeroNumber == numeroString) // (True)comparando os valores
+console.log(numeroNumber === numeroString) // (False)comparando os tipos
+console.log(numeroNumber + numeroString) // Conversão implicita(contatenação de string)
+
+//conversão explicita
+
+console.log(numeroNumber + Number(numeroString))
+
+const numeroConvertido = Number(numeroString)
+
+console.log(numeroNumber + numeroConvertido)
+
+const numeroConvertidoErrado = Number("456b")
+
+console.log(numeroNumber + numeroConvertidoErrado)
+
